@@ -1,15 +1,12 @@
-"""Alert model module."""
+"""Alert model placeholder module."""
 
 from dataclasses import dataclass
 
 
 @dataclass
 class Alert:
-    """Represents an operational resilience alert."""
+    """Represents an operational alert."""
 
     id: str
-    source: str
-    severity: str
-    description: str
-    timestamp: str
-    category: str
+    message: str
+    severity: str = "low"
