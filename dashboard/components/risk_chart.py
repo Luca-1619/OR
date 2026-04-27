@@ -13,3 +13,9 @@ def render_risk_chart(score: dict) -> str:
         f"<p><strong>Rationale:</strong> {score.get('rationale', 'n/a')}</p>"
         "</div>"
     )
+"""Risk chart component placeholder module."""
+
+
+def render_risk_chart() -> str:
+    """Return placeholder risk chart."""
+    return "Risk chart placeholder"

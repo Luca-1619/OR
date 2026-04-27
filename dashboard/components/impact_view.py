@@ -13,3 +13,9 @@ def render_impact_view(result: dict) -> str:
         f"<p><strong>Recovery Time (hours):</strong> {result.get('recovery_time_hours', 'n/a')}</p>"
         "</div>"
     )
+"""Impact view component placeholder module."""
+
+
+def render_impact_view() -> str:
+    """Return placeholder impact view."""
+    return "Impact view placeholder"

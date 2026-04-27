@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from backend.api.alerts import list_alerts
 from backend.services.impact_simulator import simulate_impact
 from backend.services.scoring import SEVERITY_WEIGHTS, calculate_risk_score
+from backend.services.scoring import calculate_risk_score
 
 app = FastAPI(title="Operational Resilience Engine API")
 
@@ -18,6 +19,7 @@ def health_check() -> dict:
 @app.get("/alerts")
 def get_alerts() -> list[dict]:
     """Return sample alerts."""
+    """Return sample alerts from the alerts API module."""
     return list_alerts()
 
 
@@ -40,3 +42,11 @@ def post_simulate_impact(payload: dict) -> dict:
     severity = payload.get("severity", "medium")
     systems = payload.get("systems") or []
     return simulate_impact(scenario=scenario, severity=severity, affected_systems=systems)
+    """Return placeholder risk score payload."""
+    return calculate_risk_score()
+
+
+@app.post("/simulate-impact")
+def post_simulate_impact() -> dict:
+    """Return placeholder impact simulation payload."""
+    return simulate_impact()

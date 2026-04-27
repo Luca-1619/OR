@@ -28,3 +28,9 @@ def simulate_impact(scenario: str, severity: str, affected_systems: list[str]) -
         recovery_time_hours=recovery_time_hours,
     )
     return asdict(result)
+"""Impact simulation service placeholder module."""
+
+
+def simulate_impact() -> dict:
+    """Return a placeholder impact simulation result."""
+    return {"impact_level": "unknown", "notes": []}

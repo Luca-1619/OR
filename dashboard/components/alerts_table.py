@@ -30,3 +30,9 @@ def render_alerts_table(alerts: list[dict]) -> str:
 
     footer = "</tbody></table>"
     return header + "".join(rows) + footer
+"""Alerts table component placeholder module."""
+
+
+def render_alerts_table() -> str:
+    """Return placeholder alerts table."""
+    return "Alerts table placeholder"
